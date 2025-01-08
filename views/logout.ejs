@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGS</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* General reset for margin, padding, and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* ==================== HEADER ==================== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            /* background-color:#333; */
+            color: white;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .header-logo{
+          height: 60px;
+          width: 60px;
+        }
+
+        /* Navigation links styling */
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #56CCF2;
+        }
+
+        /* Button styling */
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: #56CCF2;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2F80ED;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .image {
+            /* background-image: url("https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .backgound-image{
+          background-image: url("https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww");
+            background-repeat: no-repeat;
+            background-size: cover; 
+            height: 100vh;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-family: 'Quicksand', sans-serif;
+            margin: 10px 0;
+        }
+
+        /* ==================== MAIN SECTION (Card Layout) ==================== */
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card__header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card__body {
+            padding: 15px;
+        }
+
+        .tag {
+            background-color: #56CCF2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .card__body h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .card__body p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card__footer {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .user__image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user__info h5 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .user__info small {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .header-a{
+          margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="backgound-image">
+      <!-- ==================== HEADER ==================== -->
+      <div class="header">
+        <div class="logo">
+            <img class="header-logo" src="https://www.logoai.com/oss/icons/2021/10/27/rA73APprj8wskQ0.png" alt="Logo">
+        </div>
+        <div class="nav">
+            <a class="header-a" href="#">HOME</a>
+            <a class="header-a" href="#">ABOUT</a>
+            <a class="header-a" href="#">CONTACT</a>
+            <a class="header-a" href="#">GALLERY</a>
+        </div>
+        <div class="buttons">
+            <a href="/project"><button class="btn">Log - Out</button></a>
+        </div>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="image">
+        <div class="hero-text">
+            <h1>INFORMATION TECHNOLOGY</h1>
+            <h1>BLOGS</h1>
+            <h1>LEARN MORE</h1>
+        </div>
+    </div>
+</div>
+
+    <!-- ==================== MAIN SECTION (Card Layout) ==================== -->
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card__header">
+                <img src="https://ugc.futurelearn.com/uploads/images/d5/6d/d56d20b4-1072-48c0-b832-deecf6641d49.jpg" alt="card image">
+            </div>
+            <div class="card__body">
+                <span class="tag">Technology</span>
+                <h4>What's new in 2022 Tech</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+            </div>
+            <div class="card__footer">
+                <img src="https://i.pravatar.cc/40?img=1" alt="user image" class="user__image">
+                <div class="user__info">
+                    <h5>Jane Doe</h5>
+                    <small>2h ago</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Cards can be added here... -->
+
+    </div>
+
+</body>
+
+</html>

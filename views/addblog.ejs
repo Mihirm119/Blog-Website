@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="https://thumbs.dreamstime.com/b/admin-icon-vector-set-white-background-eps-admin-icon-isolated-white-background-332314149.jpg" alt="">
+            </div>
+
+            <span class="logo_name"> Mihir</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="/adminpanel">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="/adminpanel/addblog">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Add Blogs</span>
+                </a></li>
+                <li><a href="/adminpanel/Contact">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Contact</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="/logout">
+                    <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+                </a></li>
+            </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <!-- <i class="uil uil-bars sidebar-toggle"></i> -->
+
+            <!-- <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div> -->
+            
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+
+              
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-plus-circle"></i>
+                    <span class="text">ADD BLOGS</span>
+                </div>
+
+                <div class="form">
+                    <form  method="post">
+                        <input type="hidden" name="up" value="<%= data._id %>">
+                        <h3>Image URL:-  &nbsp;&nbsp;<input type="text" name="image" value="<%= data.image %>"   placeholder="Enter a main image"></h3>
+                        <h3>Enter a TOPIC:- &nbsp;&nbsp;<input type="text" name="name" value="<%= data.name %>"  placeholder="Enter a main Year"></h3>
+                        <h3>Enter a Month:- &nbsp;&nbsp;<input type="text" name="month" value="<%= data.month %>" placeholder="Enter a main Month"></h3>
+                        <h3>Enter a Date:- &nbsp;&nbsp;<input type="text" name="date" value="<%= data.date %>" placeholder="Enter a main Date"></h3>
+                        <h3>Enter a Year:- &nbsp;&nbsp;<input type="text" name="year" value="<%= data.year %>"  placeholder="Enter a main Year"></h3>
+                        <h3>Enter a readmainimage:- &nbsp;&nbsp;<input type="text"   name="readmainimage" value="<%= data.readmainimage %>"  placeholder="Enter a  readmainimage"></h3>
+                        <h3>Enter a first_paragraph:- &nbsp;&nbsp;<input type="text" name="first_paragraph" value="<%= data.first_paragraph %>" placeholder="Enter a  first_paragraph"></h3>
+                        <h3>Enter a secound_paragraph:- &nbsp;&nbsp;<input type="text" name="secound_paragraph" value="<%= data.secound_paragraph %>" placeholder="Enter a  secound_paragraph"></h3>
+                        <h3>Enter a first_image:- &nbsp;&nbsp;<input type="text" name="first_image" value="<%= data.first_image %>" placeholder="Enter a  first_image"></h3>
+                        <h3>Enter a secound_third:- &nbsp;&nbsp;<input type="text" name="secound_third" value="<%= data.secound_third %>" placeholder="Enter a  secound_third"></h3>
+                        <h3>TECHNOLOGY:-</h3>
+                        <div class="checkbox-container">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Design" <%= data.technology && data.technology.includes('Design') ? 'checked' : '' %>>
+                                Design
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="AI" <%= data.technology && data.technology.includes('AI') ? 'checked' : '' %>>
+                                AI
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Business" <%= data.technology && data.technology.includes('Business') ? 'checked' : '' %>>
+                                Business
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Mobile-Development"  <%= Array.isArray(data.technology) && data.technology.includes('Mobile-Development') ? 'checked' : '' %>>
+                                Mobile Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Custom Software Development" <%= data.technology && data.technology.includes('Custom Software Development') ? 'checked' : '' %>>
+                                Custom Software Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Fintech" <%= data.technology && data.technology.includes('Fintech') ? 'checked' : '' %>>
+                                Fintech
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Community" <%= data.technology && data.technology.includes('Community') ? 'checked' : '' %>>
+                                Community
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Consulting" <%= data.technology && data.technology.includes('Consulting') ? 'checked' : '' %>>
+                                Consulting
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Outstaffing" <%= data.technology && data.technology.includes('Outstaffing') ? 'checked' : '' %>>
+                                Outstaffing
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Tech Trends" <%= data.technology && data.technology.includes('Tech Trends') ? 'checked' : '' %>>
+                                Tech Trends
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="News" <%= data.technology && data.technology.includes('News') ? 'checked' : '' %>>
+                                News
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Healthcare" <%= data.technology && data.technology.includes('Healthcare') ? 'checked' : '' %>>
+                                Healthcare
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="IoT" <%= data.technology && data.technology.includes('IoT') ? 'checked' : '' %>>
+                                IoT
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Management" <%= data.technology && data.technology.includes('Management') ? 'checked' : '' %>>
+                                Management
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Construction" <%= data.technology && data.technology.includes('Construction') ? 'checked' : '' %>>
+                                Construction
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Blockchain" <%= data.technology && data.technology.includes('Blockchain') ? 'checked' : '' %>>
+                                Blockchain
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Ecommerce" <%= data.technology && data.technology.includes('Ecommerce') ? 'checked' : '' %>>
+                                Ecommerce
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="technology" value="Hospitality" <%= data.technology && data.technology.includes('Hospitality') ? 'checked' : '' %>>
+                                Hospitality
+                            </label>
+                        <input type="submit">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+                <!-- //============================================================================================// -->
+                <table class="add_blog_table">
+                    <thead>
+                        <tr>
+                            <th>BLOG-NAME</th>
+                            <th>DATE</th>
+                            <th>UPDATE</th>
+                            <th>DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Example of table rows -->
+                        <% sendblog.map((ele) => { %>
+                            <tr>
+                                <td><%= ele.name %></td>
+                                <td><%= ele.month %> <%= ele.date %>,<%= ele.year %></td>
+                                <td><a href="/adminpanel/addblog/?update=<%=ele._id%>"><button class="delete-btn">UPDATE</button></a></td>
+                                <td><a href="/adminpanel/addblog/?Delete=<%=ele._id%>"><button class="update-btn">DELETE</button></a></td>
+                            </tr>
+                         <% })  %>
+                    </tbody>
+
+                </table>
+                    
+                <!-- //============================================================================================// -->
+
+
+            <script>
+                Array.isArray(data.technology) ? 
+                data.technology.includes('Mobile Development') : 
+                data.technology.split(',').includes('Mobile Development');
+
+            </script>
+                
+
+              
+          
+        
+    </section>
+</body>
+</html>
